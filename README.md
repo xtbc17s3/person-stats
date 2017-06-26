@@ -2,11 +2,11 @@
 
 ## Day 1 Homework
 
-* Update the new _details_ div with the value of the text input.
+* Update the new _stats_ div with the value of the text input.
 
 ### Bonus Credit
 
-* Add the name to a _paragraph_ inside the _details_ div.
+* Add the name to a _paragraph_ inside the _stats_ div.
 
 ### Super Mega Bonus Credit
 
