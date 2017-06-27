@@ -6,20 +6,23 @@ function handleSubmit(ev) {
   const age = f.age.value
   const favoriteColor = f.favoriteColor.value
 
-  const p = document.createElement('p')
-  p.textContent = `${name}, age ${age} ${favoriteColor}`
-  p.style.backgroundColor = favoriteColor
-  // p.setAttribute('id', name)
+  const list = document.createElement('ul')
+
+  const nameItem = document.createElement('li')
+  nameItem.textContent = `Name: ${name}`
+  list.appendChild(nameItem)
+
+  const ageItem = document.createElement('li')
+  ageItem.textContent = `Age: ${age}`
+  list.appendChild(ageItem)
+
+  const colorItem = document.createElement('li')
+  colorItem.textContent = favoriteColor
+  colorItem.style.backgroundColor = favoriteColor
+  list.appendChild(colorItem)
 
   const stats = document.querySelector('#stats')
-  stats.appendChild(p)
-
-  // stats.innerHTML = '<p>' + name + ', age ' + age + '</p>'
-  // stats.innerHTML = `
-  //   <p style="background-color: ${favoriteColor}">
-  //     ${name}, age ${age}
-  //   </p>
-  // `
+  stats.appendChild(list)
 }
 
 const personForm = document.querySelector('#person-form')
