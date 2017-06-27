@@ -18,8 +18,14 @@ function handleSubmit(ev) {
   list.appendChild(ageItem)
 
   const colorItem = document.createElement('li')
-  colorItem.textContent = `Favorite Color: ${color}`
-  colorItem.style.backgroundColor = color
+  colorItem.textContent = 'Favorite Color: '
+
+  const colorDiv = document.createElement('div')
+  colorDiv.style.backgroundColor = color
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  colorItem.appendChild(colorDiv)
+
   list.appendChild(colorItem)
 
   div.appendChild(list)
