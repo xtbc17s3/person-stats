@@ -4,7 +4,8 @@ function handleSubmit(ev) {
   const name = f.personName.value
   const age = f.age.value
   const stats = document.querySelector('#stats')
-  stats.innerHTML = '<p>' + name + ', age ' + age + '</p>'
+  // stats.innerHTML = '<p>' + name + ', age ' + age + '</p>'
+  stats.innerHTML = `<p>${name}, age ${age}</p>`
 }
 
 const personForm = document.querySelector('#person-form')
