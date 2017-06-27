@@ -1,5 +1,7 @@
 # Person Stats
 
+The first JavaScript project for Xtern Bootcamp 2017 Session 3.
+
 ## Day 1 Homework
 
 * Update the new _stats_ div with the value of the text input.
