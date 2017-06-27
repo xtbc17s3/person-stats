@@ -5,8 +5,13 @@ function handleSubmit(ev) {
   const age = f.personAge.value
   const div = document.querySelector('#stats')
   
+  const p = document.createElement('p')
+  p.textContent = `${name}, age ${age}`
+
+  div.appendChild(p)
+
   // div.innerHTML = '<p>' + name + ', age ' + age + '</p>'
-  div.innerHTML = `<p>${name}, age ${age}</p>`
+  // div.innerHTML = `<p>${name}, age ${age}</p>`
 }
 
 const personForm = document.querySelector('#person-form')
