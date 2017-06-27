@@ -7,11 +7,22 @@ function handleSubmit(ev) {
 
   const div = document.querySelector('#stats')
   
-  const p = document.createElement('p')
-  p.textContent = `${name}, age ${age}`
-  p.style.backgroundColor = color
+  const list = document.createElement('ul')
 
-  div.appendChild(p)
+  const nameItem = document.createElement('li')
+  nameItem.textContent = `Name: ${name}`
+  list.appendChild(nameItem)
+
+  const ageItem = document.createElement('li')
+  ageItem.textContent = `Age: ${age}`
+  list.appendChild(ageItem)
+
+  const colorItem = document.createElement('li')
+  colorItem.textContent = `Favorite Color: ${color}`
+  colorItem.style.backgroundColor = color
+  list.appendChild(colorItem)
+
+  div.appendChild(list)
 
   // div.innerHTML = '<p>' + name + ', age ' + age + '</p>'
   // div.innerHTML = `<p style="background-color: ${color}">${name}, age ${age}</p>`
