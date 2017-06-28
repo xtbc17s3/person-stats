@@ -17,6 +17,17 @@ function renderListItem(label, value) {
   return item
 }
 
+function renderList(data) {
+  const list = document.createElement('ul')
+
+  Object.keys(data).map(label => {
+    const item = renderListItem(label, data[label])
+    list.appendChild(item)
+  })
+
+  return list
+}
+
 function handleSubmit(ev) {
   ev.preventDefault()
   const f = ev.target
@@ -27,14 +38,8 @@ function handleSubmit(ev) {
     favoriteColor: renderColor(f.favoriteColor.value),
   }
 
-  const list = document.createElement('ul')
-
-  Object.keys(person).map(label => {
-    const item = renderListItem(label, person[label])
-    list.appendChild(item)
-  })
-
   const stats = document.querySelector('#stats')
+  const list = renderList(person)
   stats.appendChild(list)
 }
 
