@@ -6,31 +6,33 @@ function renderColor(color) {
   return colorDiv
 }
 
+function renderListItem(label, value) {
+  const item = document.createElement('li')
+  item.textContent = `${label}: `
+  try {
+    item.appendChild(value)
+  } catch (e) {
+    item.textContent += value
+  }
+  return item
+}
+
 function handleSubmit(ev) {
   ev.preventDefault()
   const f = ev.target
 
-  const name = f.personName.value
-  const age = f.age.value
-  const favoriteColor = f.favoriteColor.value
+  const person = {
+    name: f.personName.value,
+    age: f.age.value,
+    favoriteColor: renderColor(f.favoriteColor.value),
+  }
 
   const list = document.createElement('ul')
 
-  const nameItem = document.createElement('li')
-  nameItem.textContent = `Name: ${name}`
-  list.appendChild(nameItem)
-
-  const ageItem = document.createElement('li')
-  ageItem.textContent = `Age: ${age}`
-  list.appendChild(ageItem)
-
-  const colorItem = document.createElement('li')
-  colorItem.textContent = 'Favorite Color: '
-
-  const colorDiv = renderColor(favoriteColor)
-  colorItem.appendChild(colorDiv)
-
-  list.appendChild(colorItem)
+  Object.keys(person).map(label => {
+    const item = renderListItem(label, person[label])
+    list.appendChild(item)
+  })
 
   const stats = document.querySelector('#stats')
   stats.appendChild(list)
