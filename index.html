@@ -15,23 +15,27 @@
   <body>
     <h1>Person Stats</h1>
 
-    <form id="person-form">
-      <p>
-        <label for="personName">Name</label>
-        <input type="text" name="personName">
-      </p>
-      <p>
-        <label for="age">Age</label>
-        <input type="number" name="age">
-      </p>
-      <p>
-        <label for="favoriteColor">Favorite color</label>
-        <input type="color" name="favoriteColor">
-      </p>
-      <button type="submit">Go</button>
-    </form>
+    <main>
+      <div>
+        <form id="person-form">
+          <p>
+            <label for="personName">Name</label>
+            <input type="text" name="personName">
+          </p>
+          <p>
+            <label for="age">Age</label>
+            <input type="number" name="age">
+          </p>
+          <p>
+            <label for="favoriteColor">Favorite color</label>
+            <input type="color" name="favoriteColor">
+          </p>
+          <button class="button" type="submit">Go</button>
+        </form>
+      </div>
 
-    <div id="stats"></div>
+      <div id="stats"></div>
+    </main>
     
     <script src="index.js"></script>
   </body>
