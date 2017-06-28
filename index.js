@@ -1,3 +1,11 @@
+function renderColor(color) {
+  const colorDiv = document.createElement('div')
+  colorDiv.style.backgroundColor = color
+  colorDiv.style.width = '6rem'
+  colorDiv.style.height = '3rem'
+  return colorDiv
+}
+
 function handleSubmit(ev) {
   ev.preventDefault()
   const f = ev.target
@@ -19,10 +27,7 @@ function handleSubmit(ev) {
   const colorItem = document.createElement('li')
   colorItem.textContent = 'Favorite Color: '
 
-  const colorDiv = document.createElement('div')
-  colorDiv.style.backgroundColor = favoriteColor
-  colorDiv.style.width = '6rem'
-  colorDiv.style.height = '3rem'
+  const colorDiv = renderColor(favoriteColor)
   colorItem.appendChild(colorDiv)
 
   list.appendChild(colorItem)
